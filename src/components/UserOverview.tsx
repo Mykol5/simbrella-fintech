@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from './NavBar';  // Importing the global Navbar
+import { FaUserCircle, FaWallet, FaRegCreditCard } from 'react-icons/fa'; // Importing some icons
 
 interface Transaction {
   id: number;
@@ -68,7 +69,10 @@ const UserOverview: React.FC = () => {
 
             {/* Balance Overview Section */}
             <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold">Balance Overview</h3>
+              <div className="flex items-center space-x-3">
+                <FaWallet className="text-3xl" />
+                <h3 className="text-xl font-semibold">Balance Overview</h3>
+              </div>
               <p className="text-2xl font-bold mt-2">${user.accountBalance.toFixed(2)}</p>
             </div>
 
@@ -79,7 +83,10 @@ const UserOverview: React.FC = () => {
                 {user.recentTransactions && user.recentTransactions.length > 0 ? (
                   user.recentTransactions.map((transaction) => (
                     <li key={transaction.id} className="flex justify-between py-2 border-b border-gray-200">
-                      <span className="text-lg">{transaction.type}</span>
+                      <div className="flex items-center space-x-2">
+                        <FaRegCreditCard className="text-lg text-gray-600" />
+                        <span className="text-lg">{transaction.type}</span>
+                      </div>
                       <span className="text-lg font-semibold">
                         {transaction.type === 'Deposit' ? '+' : '-'}${transaction.amount.toFixed(2)}
                       </span>

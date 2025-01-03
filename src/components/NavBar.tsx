@@ -1,5 +1,3 @@
-// // components/Navbar.tsx
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +5,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-8 py-4 bg-purple-800">
+    <header className="flex items-center justify-between px-8 py-4 bg-purple-800 relative">
       <h1 className="text-3xl font-extrabold tracking-wide text-white">FintechPro</h1>
 
       {/* Desktop Menu */}
@@ -17,7 +15,6 @@ const Navbar: React.FC = () => {
         <Link to="/loan-management" className="hover:underline text-white">Loan Management</Link>
         <Link to="/transaction-history" className="hover:underline text-white">Transaction History</Link>
       </nav>
-      {/* className="hover:underline" */}
 
       {/* Mobile Menu Toggle */}
       <button
@@ -30,6 +27,12 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu (Fullscreen Overlay) */}
       {menuOpen && (
         <div className="absolute top-0 left-0 w-full h-screen bg-purple-900 z-50 flex flex-col items-center justify-center space-y-6">
+          <button
+            onClick={() => setMenuOpen(false)}  // Close the menu when clicked
+            className="absolute top-4 right-4 text-white text-3xl"
+          >
+            ✖
+          </button>
           <Link
             to="/"
             className="text-xl hover:text-purple-300 text-white"
@@ -65,8 +68,6 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
 
 
 
