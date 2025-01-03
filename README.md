@@ -27,12 +27,12 @@ Follow these steps to set up the project locally:
    git clone https://github.com/Mykol5/fintechpro.git
    cd fintechpro
 
-2. Install dependencies
+2. **Install dependencies**
 Use Yarn to install required packages:
-
+```bash
 yarn install
 
-
+```
 3. Run the development server
 Start the development server to preview the project:
 
