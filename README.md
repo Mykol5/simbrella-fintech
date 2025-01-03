@@ -33,25 +33,25 @@ Use Yarn to install required packages:
 yarn install
 
 ```
-3. Run the development server
+3. **Run the development server**
 Start the development server to preview the project:
-
+```bash
 yarn start
+```
 
-
-4. Build the project
+4. **Build the project**
 Generate a production-ready build:
-
+```bash
 yarn build
+```
 
-
-5. Run tests
+5. **Run tests**
 Execute tests and view results:
-
+```bash
 yarn test
+```
 
-
-6. Deploy the app (Optional)
+6. **Deploy the app (Optional)**
 Deploy to Netlify or Vercel using their respective CLI tools or dashboard.
 
 
