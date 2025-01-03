@@ -116,7 +116,7 @@ const UserOverview: React.FC = () => {
 export default UserOverview;
 
 
-
+//Adjustments to the UserOverview component to include the User Details Section and the Loan Management Section:
 // Your implementation of the TransactionHistory component addresses several of the requirements, particularly under the "Transaction History Section" and "Responsive Design" criteria. Below is a checklist of how it aligns with the given scenario and what could still be added or enhanced:
 
 // 1. User Overview Section:
